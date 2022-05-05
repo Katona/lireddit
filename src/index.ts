@@ -13,7 +13,7 @@ const main = async () => {
     user: "postgres",
   });
   const post = orm.em.create(Post, { title: "First Post" });
-  orm.em.persistAndFlush(post);
+  await orm.em.persistAndFlush(post);
 };
 
 main();
